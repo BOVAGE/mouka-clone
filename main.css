@@ -228,6 +228,9 @@ header h2 {
 .watch-stories {
 	background-color: var(--strip-color);
 	text-align: center;
+}
+
+.watch-stories > .container {
 	padding: 15px var(--main-spacing);
 }
 
@@ -259,6 +262,10 @@ header h2 {
 	align-items: center;
 }
 
+/* sleep lab section rules */
 .sleep-lab {
-	background-image: url("");
+	background-image: url("images/Mask-Group-1.png"),
+					linear-gradient(blue, white, yellow);
+	background-size: cover;
+	background-repeat: no-repeat;
 }
