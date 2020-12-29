@@ -27,6 +27,12 @@ a {
 	text-decoration: none;
 }
 
+h5 {
+	color: var(--main-green);
+	font-weight: 400;
+	font-size: 1.1rem;
+}
+
 img {
 	max-width: 100%;
 }
@@ -34,6 +40,7 @@ img {
 header h2 {
 	color: var(--main-green);
 	font-size: 2.5rem;
+	text-align: center;
 	font-weight: 900;
 	padding: 10px 0;
 }
@@ -48,10 +55,14 @@ header h3 {
 header h4 {
 	color: var(--main-green);
 	font-weight: 400;
+	text-align: center;
 	font-size: 1.6rem;
 	padding: 10px 20px;
 }
 
+ul,ol {
+	list-style: none;
+}
 
 /* nav bar section rules*/
 .navbar {
@@ -69,6 +80,10 @@ nav {
 .logo {
 	width: 65px;
 	height: 50px:
+}
+
+.menu {
+	cursor: pointer;
 }
 
 /* header section rules*/
@@ -178,10 +193,6 @@ p.price-range {
 	padding: 15px 0 100px;
 }
 
-header h2 {
-	text-align: center;
-}
-
 .showcase-container {
 	display: flex;
 	flex-direction: row;
@@ -264,8 +275,97 @@ header h2 {
 
 /* sleep lab section rules */
 .sleep-lab {
-	background-image: url("images/Mask-Group-1.png"),
-					linear-gradient(blue, white, yellow);
+	background: url("images/Mask-Group-1.png"),
+					#c2fbc8;
 	background-size: cover;
 	background-repeat: no-repeat;
+}
+
+
+
+.four-cols-container {
+	display: grid;
+	grid-template-columns: 1fr;
+	padding: 0 var(--main-spacing);
+}
+
+.card-container {
+	margin: 15px 0;
+	border-radius: 25px;
+	border: 1px solid white;
+	box-shadow: 2px 5px 8px rgb(248, 248, 248),
+				-2px 5px 10px rgb(242, 242, 232);
+}
+
+.card-container > img {
+	width: 100%;
+	border-top-right-radius: 25px;
+	border-top-left-radius: 25px;
+	margin-bottom: -8px;
+}
+
+.card-description {
+	background-color: white;
+	padding: 12px 20px;
+	border-bottom-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+}
+
+.card-description p {
+	padding: 0 0 5px;
+	font-size: 0.75rem;
+}
+
+.card-description time {
+	color: #bfbfbf;
+}
+
+.pagination {
+	padding: 20px 0 30px;
+}
+
+.pagination li {
+	text-decoration: underline;
+	margin-left: 15px;
+}
+
+/* footer section rules */
+footer {
+	background-color: var(--main-green);
+	padding: 35px var(--main-spacing);
+}
+
+footer h2 {
+	color: yellow;
+	padding: 20px 0;
+}
+
+footer li,
+footer li > a {
+	color: white;
+}
+
+i.fa-arrow-up {
+	position: fixed;
+	bottom: 80px;
+	right: 50px;
+	color: #bfbfbf;
+	padding: 15px;
+	border-radius: 50%;
+	border: 1px solid #bfbfbf;
+}
+
+/* copyright section rules */
+.copyright {
+	font-size: 0.9rem;
+	font-weight: 400;
+	color: white;
+	background-color: var(--main-green);
+	padding: 20px var(--main-spacing);
+}
+
+.space-between {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
