@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap');
 /* general rules */
 :root {
 	--main-green: #0e773f;
-	--light-green: #6dab3c;
+	--light-green: #006837;
 	--main-spacing: 20px;
 	--strip-color: #eef5f2;
 }
@@ -67,6 +67,8 @@ ul,ol {
 /* nav bar section rules*/
 .navbar {
 	background-color: white;
+	position: sticky;
+	top: 0;
 }
 
 nav {
@@ -101,7 +103,7 @@ nav {
 .products {
 	text-align: center;
 	padding: 15px 0;
-	padding: 0 var(--main-spacing);
+	padding: 30px var(--main-spacing);
 }
 
 .product-link {
@@ -116,7 +118,7 @@ nav {
 	font-weight: 500;
 	font-size: 1.2rem;
 	padding: 10px;
-	margin: 10px auto;
+	margin: 10px 0;
 	text-transform: uppercase;
 	transition: background-color,color 0.5s ease-in-out;
 }
@@ -136,7 +138,6 @@ nav {
 }
 
 .product-card {
-	display: block;
 	width: 80%;
 	margin: 15px auto;
 }
@@ -180,11 +181,14 @@ p.price-range {
 
 .feature-box h4 {
 	color: var(--main-green);
+	font-size: 1.2rem;
 	font-weight: 700;
+	padding: 15px 0;
 }
 
 .feature-box p {
-	color: var(--main-green);
+	color: var(--light-green);
+	font-size: 0.95rem;
 	font-weight: 300;
 }
 
@@ -196,6 +200,7 @@ p.price-range {
 .showcase-container {
 	display: flex;
 	flex-direction: row;
+	align-items: flex-start;
 	padding: 0 var(--main-spacing);
 }
 
@@ -212,7 +217,7 @@ p.price-range {
 .showcase-text p {
 	color: var(--light-green);
 	font-weight: 300;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 
 .showcase-container > img {
@@ -243,6 +248,10 @@ p.price-range {
 
 .watch-stories > .container {
 	padding: 15px var(--main-spacing);
+}
+
+.youtube-container > div:last-child {
+	display: none;
 }
 
 .watch-stories p,
@@ -281,12 +290,14 @@ p.price-range {
 	background-repeat: no-repeat;
 }
 
-
+.sleep-lab h2 {
+	font-size: 5.0rem;
+}
 
 .four-cols-container {
 	display: grid;
 	grid-template-columns: 1fr;
-	padding: 0 var(--main-spacing);
+	padding: 15px var(--main-spacing);
 }
 
 .card-container {
@@ -343,6 +354,8 @@ footer h2 {
 footer li,
 footer li > a {
 	color: white;
+	font-size: 0.9rem;
+	font-weight: 500;
 }
 
 i.fa-arrow-up {
@@ -355,10 +368,15 @@ i.fa-arrow-up {
 	border: 1px solid #bfbfbf;
 }
 
+hr {
+	border-width: 0;
+	border-top: 1px solid #c4c4c4;
+}
+
 /* copyright section rules */
 .copyright {
 	font-size: 0.9rem;
-	font-weight: 400;
+	font-weight: 500;
 	color: white;
 	background-color: var(--main-green);
 	padding: 20px var(--main-spacing);
@@ -368,4 +386,128 @@ i.fa-arrow-up {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+}
+
+/* media query for iframe when it is screen width less than 433px */
+@media (max-width: 433px) {
+	iframe {
+		width: 100%;
+	}
+}
+
+@media (min-width: 770px) {
+	.four-cols-container {
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		grid-gap: 20px;
+		align-items: start;
+	}
+	
+	.features-container {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 50px;
+	}
+	
+	.feature-box {
+		padding: 0 25px;
+	}
+	
+	.logos-container {
+		flex-direction: row;
+		padding-top: 50px;
+		padding-bottom: 50px;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+	
+	.logos-container > img {
+		width: 20%;
+	}
+}
+
+@media (min-width: 1000px) {
+	.one-col-container {
+		display: flex;
+		flex-flow: column nowrap;
+		padding: 10px 0;
+	}
+	
+	.product-links {
+		order: -1;
+	}
+	
+	.product-link.active {
+		text-decoration: underline;
+		color: var(--main-green);
+	}
+	
+	.product-link {
+		display: inline;
+		border-radius: 0;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		-o-border-radius: 0;
+		border: none;
+		color: #c4c4c4;
+		font-weight: 400;
+		font-size: 1.2rem;
+		padding: 10px;
+		margin: 10px 35px;
+		text-transform: uppercase;
+	}
+	
+	.product-card-container {
+		display: flex;
+		justify-content: center;
+	}
+	
+	.product-card {
+		width: 20%;
+		margin: 25px 40px;
+	}
+	
+	.product-link:hover {
+		background-color: initial;
+		color: initial;
+	}
+	
+	footer {
+		display: flex;
+		flex-flow: row nowrap;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+	
+	footer > div {
+		flex-basis: 50%; 
+	}
+	
+	.space-between {
+		flex-direction: row;
+	}
+	
+	.showcase-text {
+		width: 50%;
+		padding: 25px 0;
+	}
+	
+	.showcase-text p {
+		padding: 0 200px 0 10px;
+		margin-top: 20px;
+	}
+	
+	.showcase-container > img {
+		display: block;
+		width: 50%;
+		border-radius: 20px;
+	}
+	
+	.youtube-container {
+		display: flex;
+		justify-content: space-around;
+	}
+	
+	.youtube-container > div:last-child {
+		display: block;
+	}
 }
