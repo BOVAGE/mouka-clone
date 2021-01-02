@@ -84,6 +84,66 @@ nav {
 	height: 50px:
 }
 
+.close-menu {
+	display: none;
+}
+
+/* hides the expanded nav bar */
+@media screen and (max-width: 1025px) {
+	.nav-items {
+		position: fixed;
+		left: 0;
+		top: 0;
+		background-color: rgba(48,48,48,.97);
+		width: calc(100vw - 65px);
+		height: 100vh;
+		overflow-y: scroll;
+		padding: 20px 0 20px var(--main-spacing);
+		transform: translateX(-1260px);
+		transition: transform 0.2s ease-in-out;
+	}
+
+	.show {
+		transform: translateX(0);
+	}
+	
+	.close-menu {
+		display: block;
+		color: #c4c4c4;
+		padding-bottom: 20px;
+		cursor: pointer;
+	}
+	
+	.nav-items > li > a {
+		color: #c4c4c4;
+		font-size: 1.5rem;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+	
+	.nav-items > li > a:hover {
+		color: white;
+		text-decoration: line-through;
+	}
+	
+	.nav-items > li:first-child > a {
+		color: white;
+		text-decoration: line-through;
+	}
+	
+	.cta {
+		display: inline-block;
+		color: yellow;
+		font-size: 0.9rem;
+		border-radius: 25px;
+		background-color: var(--main-green);
+		padding: 8px 15px;
+		font-weight: 600;
+		margin: 15px 0;
+	}
+}
+
+
 .menu {
 	cursor: pointer;
 }
@@ -509,5 +569,40 @@ hr {
 	
 	.youtube-container > div:last-child {
 		display: block;
+	}
+}
+
+@media (min-width: 1025px) {
+	.nav-items {
+		margin: 0 0 0 90px;
+		flex-grow: 1;
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	.nav-items > li > a {
+		color: #333;
+		font-size: 0.9rem;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+	
+	.nav-items > li:first-child > a {
+		padding-bottom: 5px;
+		border-bottom: 2px solid #333;
+	}
+	
+	.cta {
+		display: inline-block;
+		color: yellow;
+		font-size: 0.9rem;
+		border-radius: 25px;
+		background-color: var(--main-green);
+		padding: 8px 15px;
+		font-weight: 600;
+	}
+	
+	.menu {
+		display: none;
 	}
 }
