@@ -33,9 +33,11 @@ document.querySelector(".close-menu").addEventListener("click", () => {
 )
 
 // closes the sidebar when anywhere apart from the sidebar is clicked
-// document.addEventListener("click", (event) => {
-	// if (!event.target.classList.contains("nav-items")) {
-		// sidebar.classList.remove("show");
-	// }
-	// }
-// )
+document.addEventListener("click", (event) => {
+	if (sidebar.classList.contains("show")) {
+		if (!event.target.classList.contains("nav-items") && !event.target.classList.contains("menu")) {
+			sidebar.classList.remove("show");
+		}
+	}
+	}
+)
