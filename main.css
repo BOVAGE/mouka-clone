@@ -419,6 +419,7 @@ footer li > a {
 }
 
 i.fa-arrow-up {
+	display: none;
 	position: fixed;
 	bottom: 80px;
 	right: 50px;
@@ -426,6 +427,10 @@ i.fa-arrow-up {
 	padding: 15px;
 	border-radius: 50%;
 	border: 1px solid #bfbfbf;
+}
+
+i.fa-arrow-up:hover {
+	color: white;
 }
 
 hr {
