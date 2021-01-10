@@ -5,6 +5,7 @@
 	--light-green: #006837;
 	--main-spacing: 20px;
 	--strip-color: #eef5f2;
+	scroll-behavior: smooth;
 }
 
 * {
